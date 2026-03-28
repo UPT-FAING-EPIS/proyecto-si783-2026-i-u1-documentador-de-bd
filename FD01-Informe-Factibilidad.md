@@ -18,8 +18,8 @@ Docente: *Mag. Patrick Cuadros Quiroga*
 
 Integrantes:
 
-***Andia Navarro, Diego Fabrizio (2022073906)***
-***Quipe Chileno, Clara Briyith Mayra (2024080129)***
+- ***Andia Navarro, Diego Fabrizio (2022073906)***
+- ***Quipe Chileno, Clara Briyith Mayra (2024080129)***
 
 **Tacna – Perú**
 
@@ -76,15 +76,15 @@ Versión *{1.0}*
 
 1. <span id="_Toc52661346" class="anchor"></span>**Descripción del Proyecto**
 
-    1.1. Nombre del proyecto
+### **1.1 Nombre del proyecto**
 Sistema de documentación de base de datos
-    1.2. Duración del proyecto
+
+### **1.2 Duración del proyecto**
 3 meses
-    1.3. Descripción
+
+### **1.3 Descripción**
 El proyecto consiste en el desarrollo de un sistema documentador de bases de datos que permita generar, organizar y mantener documentación estructurada de bases de datos de manera automatizada o semiautomatizada. Este sistema facilitará la visualización de tablas, relaciones, atributos, restricciones y otros elementos clave, permitiendo una mejor comprensión y mantenimiento de los sistemas de información.
 La importancia del proyecto radica en que muchas organizaciones carecen de documentación actualizada de sus bases de datos, lo cual genera dificultades en el mantenimiento, desarrollo y escalabilidad de los sistemas. La ausencia de documentación adecuada provoca dependencia de conocimiento técnico específico y aumenta el riesgo de errores en modificaciones futuras. La propuesta permitirá centralizar la documentación, mejorar la trazabilidad de cambios y optimizar el trabajo de desarrolladores, analistas y administradores de bases de datos, alineándose con las buenas prácticas de ingeniería de software y gestión de datos.
-
-        En que consiste el proyecto/importancia del mismo, contexto en que se va desenvolver
 
     1.4. Objetivos
 #### **1.4.1 Objetivo general**
@@ -97,9 +97,6 @@ Desarrollar un sistema documentador de bases de datos que permita organizar, vis
 - Mantener un historial de cambios en la base de datos para mejorar la trazabilidad y el control de versiones.
 - Facilitar la gestión y mantenimiento de bases de datos existentes, para poder reducir errores y tiempos de análisis.
 
-        1.4.1 Objetivo general
-        1.4.2 Objetivos Específicos
-            Para cada objetivo específico se indicara que se va a lograr
 
 <div style="page-break-after: always; visibility: hidden">\pagebreak</div>
 
@@ -111,7 +108,7 @@ Desarrollar un sistema documentador de bases de datos que permita organizar, vis
 
 3. <span id="_Toc52661348" class="anchor"></span>**Análisis de la Situación actual**
 
-    3.1. Planteamiento del problema
+#### **3.1. Planteamiento del problema**
 En la actualidad, muchas organizaciones y equipos de desarrollo de software presentan deficiencias en la documentación de sus bases de datos, lo que genera dificultades significativas en la gestión, mantenimiento y evolución de los sistemas de información. En la mayoría de los casos, la estructura de las bases de datos no se encuentra debidamente documentada o dicha documentación está desactualizada, incompleta o dispersa en diferentes medios.
 Como antecedente, se observa que tradicionalmente la documentación de bases de datos se realiza de forma manual, mediante archivos de texto, hojas de cálculo o diagramas elaborados sin una estandarización clara. Este enfoque no solo demanda tiempo, sino que también incrementa la probabilidad de errores humanos, inconsistencias y pérdida de información relevante.
 La situación actual se caracteriza por varios problemas principales. En primer lugar, existe una alta dificultad para comprender la estructura de las bases de datos, especialmente cuando los sistemas han sido desarrollados por múltiples programadores o han evolucionado a lo largo del tiempo, lo que genera una fuerte dependencia del conocimiento tácito de ciertos desarrolladores, representando un riesgo cuando estos no están disponibles.
@@ -121,15 +118,13 @@ Otro aspecto relevante es el retrabajo constante en actividades de análisis, ya
 En consecuencia, la problemática central radica en la falta de un sistema automatizado y centralizado para la documentación de bases de datos, lo que afecta la eficiencia, calidad y mantenibilidad de los sistemas de información.
 Frente a esta situación, surge la necesidad de implementar un sistema documentador de bases de datos que permita automatizar la extracción de información, organizarla de manera estructurada y facilitar su acceso, contribuyendo así a una mejor gestión, comprensión y evolución de los sistemas.
 
-            Describa antecedentes y situación actual, explicando la problemática y/o necesidad que será resuelta con el proyecto propuesto.
-
     3.2. Consideraciones de hardware y software
 #### **Estaciones de trabajo**
 - Procesador: Intel Core i3 o equivalente  
 - Memoria RAM: 4 GB mínimo (recomendado 8 GB)  
 - Almacenamiento: 256 GB (preferible SSD)  
 - Conectividad: Internet estable  
----
+
 ### **Arquitectura del sistema**
 Para el correcto funcionamiento del sistema documentador, se consideran dos componentes principales:
 #### **Lado del servidor (Backend y Base de Datos)**
@@ -138,7 +133,7 @@ Para el correcto funcionamiento del sistema documentador, se consideran dos comp
 - Servidor: Apache o Nginx  
 - Base de datos: PostgreSQL o MySQL  
 - Sistema operativo: Linux (Ubuntu/Debian)  
----
+
 #### **Lado del cliente (Frontend)**
 - Navegadores:
   - Google Chrome  
@@ -155,10 +150,9 @@ Para el correcto funcionamiento del sistema documentador, se consideran dos comp
 4. <span id="_Toc52661349" class="anchor"></span>**Estudio de
     Factibilidad**
 
-    Describir los resultados que esperan alcanzar del estudio de factibilidad, las actividades que se realizaron para preparar la evaluación de factibilidad y por quien fue aprobado.
 
     4.1. <span id="_Toc52661350" class="anchor"></span>Factibilidad Técnica
-Actualmente, el equipo de desarrollo está conformado por un pequeño grupo de personas, donde cada integrante dispone de su propia laptop o computadora personal.adora.
+Actualmente, el equipo de desarrollo está conformado por un pequeño grupo de personas, donde cada integrante dispone de su propia laptop o computadora personal.
 - Equipos de desarrollo: Computadoras con procesadores Intel Core i3 o superior, 8 GB de memoria RAM y almacenamiento mínimo de 256 GB en disco SSD o HDD.
 - Servidor de pruebas: Puede utilizarse un equipo local o un servidor VPS con sistema operativo Linux, con una configuración mínima de 2 CPU, 4 GB de RAM.
 - Cliente final: El sistema podrá ser utilizado desde cualquier dispositivo con acceso a un navegador moderno, lo que facilita su accesibilidad.
@@ -166,14 +160,7 @@ Actualmente, el equipo de desarrollo está conformado por un pequeño grupo de p
 -Sistemas operativos compatibles:
     - Desarrollo: Windows / Linux
     - Producción: Ubuntu Server / Debian 
--
-    
 
-        El estudio de viabilidad técnica se enfoca en obtener un entendimiento de los recursos tecnológicos disponibles actualmente y su aplicabilidad a las necesidades que se espera tenga el proyecto. En el caso de tecnología informática esto implica una evaluación del hardware y software y como este puede cubrir las necesidades del sistema propuesto.
-
-        Realizar una evaluación de la tecnología actual existente y la posibilidad de utilizarla en el desarrollo e implantación del sistema.*
-
-        Describir acerca del hardware (equipos, servidor), software (aplicaciones, navegadores, sistemas operativos, dominio, internet, infraestructura de red física, etc.
 
     4.2. <span id="_Toc52661351" class="anchor"></span>Factibilidad Económica
 
@@ -210,7 +197,8 @@ Actualmente, el equipo de desarrollo está conformado por un pequeño grupo de p
 
                 {Totalizar costos y realizar resumen de costo final del proyecto y la forma de pago.
 
-    4.3. <span id="_Toc52661352" class="anchor"></span>Factibilidad Operativa
+   
+  4.3. <span id="_Toc52661352" class="anchor"></span>Factibilidad Operativa
 El sistema documentador de bases de datos ofrece importantes beneficios operativos para los equipos de desarrollo y gestión de sistemas de información. Este sistema permitirá automatizar la documentación de bases de datos, facilitando la visualización de estructuras, relaciones y atributos, lo que reduce significativamente los tiempos de análisis y comprensión.
 Asimismo, optimiza el flujo de trabajo al disminuir la necesidad de documentar manualmente, reduciendo errores y mejorando la calidad de la información disponible. Esto permite que los procesos de mantenimiento, actualización y desarrollo de sistemas se realicen de manera más eficiente y organizada.
 En cuanto a la capacidad operativa, el personal involucrado (desarrolladores, analistas y administradores de bases de datos) cuenta con los conocimientos necesarios para utilizar el sistema, ya que su diseño estará orientado a la facilidad de uso y no requerirá capacitación especializada.
@@ -222,21 +210,17 @@ Lista de interesados:
 - Usuarios finales (beneficiarios indirectos): Reciben sistemas más estables y eficientes.
 
 
-        Describir los beneficios del producto y si se tiene la capacidad por parte del cliente para mantener el sistema funcionando y garantizar el buen funcionamiento y su impacto en los usuarios. Lista de interesados.
-
     4.4. <span id="_Toc52661353" class="anchor"></span>Factibilidad Legal
 
         Determinar si existe conflicto del proyecto con restricciones legales como leyes y regulaciones del país o locales relacionadas con seguridad, protección de datos, conducta de negocio, empleo y adquisiciones.
 
     4.5. <span id="_Toc52661354" class="anchor"></span>Factibilidad Social
-
+  
 - Facilita el acceso a herramientas que mejoran la forma en que se organiza y comprende la información dentro del desarrollo de software. Al tratarse de un sistema accesible para cualquier usuario, contribuye a que más personas puedan entender y trabajar con bases de datos de manera más sencilla.
 - La implementación del sistema ayuda a ordenar y estructurar la información, evitando la desorganización y la pérdida de conocimiento técnico. Esto permite que los equipos de trabajo no dependan únicamente de una persona para entender una base de datos, sino que cualquier miembro pueda acceder a la información de forma clara y rápida.
 - Fomenta una forma de trabajo más ordenada y responsable, donde la documentación deja de ser una tarea olvidada y pasa a ser parte importante del desarrollo. Esto mejora la calidad de los proyectos y facilita la colaboración entre desarrolladores, analistas y otros usuarios.
 - Promueve el uso adecuado de la información, asegurando que los datos estén bien organizados, disponibles y sean comprensibles. De tal forma que es importante en entornos donde la información es un recurso importante, ya que permite tomar decisiones más acertadas y trabajar con mayor confianza.
 
-
-        Evaluar influencias y asuntos de índole social y cultural como el clima político, códigos de conducta y ética*
 
     4.6. <span id="_Toc52661355" class="anchor"></span>Factibilidad Ambiental
 
