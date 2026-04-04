@@ -10,19 +10,20 @@
 
 **Escuela Profesional de Ingeniería de Sistemas**
 
-**Proyecto *{Nombre de Proyecto}***
+ **Proyecto: Sistema de documentación de Base de Datos**
 
-Curso: *{Nombre de Asignatura}*
+Curso: Base de Datos II
 
-Docente: *{Nombre de Docente}*
+Docente: Mag. Patrick Cuadros Quiroga
 
 Integrantes:
 
-***{Apellidos y nombres del estudiante (código universitario)}***
+**Andia Navarro, Diego Fabrizio (2022073906)**  
+**Quispe Chileno, Clara Briyith Mayra (2024080129)**
 
-**Tacna – Perú**
+**Tacna – Perú**  
+***2026***
 
-***{Año}***
 
 **  
 **
@@ -45,7 +46,7 @@ Integrantes:
 
 
 
-**Sistema *{Nombre del Sistema}***
+**Sistema *Sistema de documentación de Base de Datos***
 
 **Documento de Visión**
 
@@ -123,6 +124,7 @@ b) Estandares legales
 
 c) Estandares de comunicación	](#_toc394513800)37
 
+
 d) Estandaraes de cumplimiento de la plataforma	](#_toc394513800)42
 
 e) Estandaraes de calidad y seguridad	](#_toc394513800)42
@@ -143,38 +145,70 @@ e) Estandaraes de calidad y seguridad	](#_toc394513800)42
 1. <span id="_Toc52661346" class="anchor"></span>**Introducción**
 
     1.1	Propósito
+El propósito del presente proyecto es desarrollar un sistema que permita automatizar la documentación de bases de datos, facilitando la visualización de su estructura, relaciones y atributos. Con esta solución se busca mejorar la comprensión de las bases de datos, reducir el tiempo de análisis y minimizar errores en su gestión y mantenimiento.
 
     1.2	Alcance
+El sistema se encuentra orientado a la generación automática de documentación a partir de bases de datos existentes, los cuales permitirá:
+- Extraer información estructural (tablas, campos, claves y relaciones).
+- Generar documentación organizada y clara.
+- Visualizar diagramas entidad-relación.
+- Exportar documentación generada.
 
     1.3	Definiciones, Siglas y Abreviaturas
+- BD: Base de datos
+- SGBD: Sistema de gestión de base de datos
+- ER: Entidad-Relación
+- Metadata: Información que describe la estructura de la base de datos
 
     1.4	Referencias
+- Documentos
+- Registros
 
     1.5	Visión General
+La visión del proyecto es desarrollar un sistema funcional, claro y accesible que permita documentar automáticamente bases de datos, facilitando su entendimiento y uso. Este sistema se encontrará orientado a estudiantes y profesionales, permitiendo mejorar la organización de la información y optimizar los procesos de desarrollo y mantenimiento.
 
 <div style="page-break-after: always; visibility: hidden">\pagebreak</div>
 
 2. <span id="_Toc52661347" class="anchor"></span>**Posicionamiento**
 
     2.1	Oportunidad de negocio
+Actualmente, muchas bases de datos no cuentan con documentación actualizada, lo que dificulta su comprensión y mantenimiento. Esto genera dependencia de los desarrolladores que las crearon y aumenta el riesgo de errores.
+El desarrollo de este sistema representa una oportunidad para mejorar la gestión de la información, permitiendo contar con documentación clara, accesible y generada automáticamente.
 
     2.2	Definición del problema
+La principal problemática es la falta de documentación estructurada en las bases de datos. En muchos casos, la información sobre tablas, relaciones y atributos no está disponible o se encuentra desactualizada.
+Esto provoca dificultades en el mantenimiento, integración de nuevos desarrolladores y evolución de los sistemas, además de incrementar el tiempo necesario para comprender la base de datos.
 
 <div style="page-break-after: always; visibility: hidden">\pagebreak</div>
 
-3. <span id="_Toc52661348" class="anchor"></span>**Vista General del Producto**
+3. <span id="_Toc52661348" class="anchor"></span>**Descripción de los interesados y usuarios**
 
     3.1	Resumen de los interesados
+- Equipo de desarrollo.- Diego Fabrizio Andia Navarro y Clara Briyith Mayra Quispe Chileno
+- Organización o usuario final del sistema
 
     3.2	Resumen de los usuarios
+- Desarrollador.- Encargado de analizar la estructura de la base de datos y utilizar la documentación para el desarrollo de sistemas.
+- Administrador de base de datos (DBA).- Responsable de gestionar la base de datos y verificar su integridad.
+- Analista de sistemas.- Encargado de interpretar la información y apoyar en la toma de decisiones.
 
     3.3	Entorno de usuario
+El sistema será una aplicación web ejecutada en computadoras, accesible desde navegadores modernos como Google Chrome, Mozilla Firefox o Microsoft Edge. El proyecto será utilizado en entornos académicos y de desarrollo de software.
 
     3.4	Perfiles de los interesados
+- Equipo de desarrollo.- Encargado del análisis, diseño, desarrollo e implementación del sistema.
+- Organización o usuario final del sistema.- Encargado de evaluar la documentación para agilizar los procesos de desarrollo.
 
     3.5	Perfiles de los Usuarios
+- Equipo de desarrollo.- Consulta la estructura de la base de datos y analiza relaciones y dependencias.
+- Administrador de base de datos (BDA).- Supervisa la correcta organización de la base de datos y valida la información generada por el sistema.
+- Analista de sistemas.- Interpreta la documentación generada y utiliza la información para procesos de análisis.
 
     3.6	Necesidades de los interesados y usuarios
+- Contar con documentación clara y organizada.
+- Visualizar relaciones entre tablas.
+- Reducir el tiempo de análisis.
+- Mantener la documentación actualizada automáticamente.
 
 <div style="page-break-after: always; visibility: hidden">\pagebreak</div>
 
@@ -194,6 +228,12 @@ e) Estandaraes de calidad y seguridad	](#_toc394513800)42
 <div style="page-break-after: always; visibility: hidden">\pagebreak</div>
 
 5. <span id="_Toc52661350" class="anchor"></span>**Características del producto**
+- Conexión a distintos SGBD.
+- Análisis automático de tablas y relaciones.
+- Generación de documentación estructurada.
+- Visualización gráfica (diagramas ER).
+- Exportación en diferentes formatos.
+- Interfaz amigable e intuitiva.
 
 <div style="page-break-after: always; visibility: hidden">\pagebreak</div>
 
@@ -202,14 +242,37 @@ e) Estandaraes de calidad y seguridad	](#_toc394513800)42
 <div style="page-break-after: always; visibility: hidden">\pagebreak</div>
 
 7. <span id="_Toc52661352" class="anchor"></span>**Rangos de Calidad**
-
+- Disponibilidad del sistema: 99%
+- Precisión en la documentación generada
+- Interfaz clara y fácil de usar
+  
 <div style="page-break-after: always; visibility: hidden">\pagebreak</div>
 
 8. <span id="_Toc52661353" class="anchor"></span>**Precedencia y Prioridad**
+- Conexión correcta a la base de datos
+- Extracción de la estructura
+- Generación de documentación
+- Exportación de resultados
 
 <div style="page-break-after: always; visibility: hidden">\pagebreak</div>
 
 9. <span id="_Toc52661354" class="anchor"></span>**Otros requerimientos del producto**
+
+b) Estandares legales
+- Protección de acceso a la base de datos
+- Uso seguro de credenciales
+
+c) Estandares de comunicación	](#_toc394513800)37
+- Interfaz clara y comprensible
+- Mensajes de error adecuados
+
+d) Estandaraes de cumplimiento de la plataforma	](#_toc394513800)42
+- Compatible con navegadores modernos
+
+e) Estandaraes de calidad y seguridad	](#_toc394513800)42
+- Control de acceso
+- Protección de datos
+- Copias de seguridad
 
 <div style="page-break-after: always; visibility: hidden">\pagebreak</div>
 
