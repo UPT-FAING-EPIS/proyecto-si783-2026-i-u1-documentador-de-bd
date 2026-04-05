@@ -357,6 +357,7 @@ Para el correcto funcionamiento del sistema, se consideran las siguientes suposi
 </ul>
 
 <p style="margin-left: 20px;">4.4 Costos y precios</p>
+
 | **Tipo de costo**   | **Costos Mensuales** | **Costos Totales** |
 |---------------------|----------------------|--------------------|
 | Costos generales    | S/. 147.50           | S/. 295.00         |
