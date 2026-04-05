@@ -358,12 +358,12 @@ Para el correcto funcionamiento del sistema, se consideran las siguientes suposi
 
 <p style="margin-left: 20px;">4.4 Costos y precios</p>
 | **Tipo de costo**   | **Costos Mensuales** | **Costos Totales** |
-|---------------------|------------------|----------------|
-| Costos generales    | S/. 147.50       | S/. 295.00     |
-| Costos operativos   | S/. 130.00       | S/. 260.00     |
-| Costos ambiente     | S/. 25.00        | S/. 50.00      |
-| Costos personal     | S/. 1600.00      | S/. 3200.00    |
-| **Total**           | **S/. 1902.50**  | **S/. 3805.00** |
+|---------------------|----------------------|--------------------|
+| Costos generales    | S/. 147.50           | S/. 295.00         |
+| Costos operativos   | S/. 130.00           | S/. 260.00         |
+| Costos ambiente     | S/. 25.00            | S/. 50.00          |
+| Costos personal     | S/. 1600.00          | S/. 3200.00        |
+| **Total**           | **S/. 1902.50**      | **S/. 3805.00**    |
 
 <p style="margin-left: 20px;">4.5 Licenciamiento e instalación</p>
 
@@ -465,6 +465,7 @@ Su implementación permite reducir el tiempo de análisis, mejorar el mantenimie
 
 
 <span id="_Toc52661356" class="anchor"></span>**RECOMENDACIONES**
+
 Se recomienda realizar pruebas periódicas para asegurar la precisión de la documentación generada y garantizar que refleje correctamente la estructura de la base de datos. Asimismo, es importante que los usuarios cuenten con una capacitación básica que les permita interpretar adecuadamente la información proporcionada por el sistema.
 
 Por otro lado, se sugiere ampliar progresivamente la compatibilidad con distintos sistemas gestores de bases de datos y mejorar la visualización de la información, con el fin de incrementar la utilidad del sistema en diferentes entornos de desarrollo.
@@ -474,6 +475,7 @@ Por otro lado, se sugiere ampliar progresivamente la compatibilidad con distinto
 
 
 <span id="_Toc52661357" class="anchor"></span>**BIBLIOGRAFIA**
+
 <ul style="margin-left: 40px;">
   <li>Silberschatz, A., Korth, H. F., & Sudarshan, S. (2019). Fundamentos de bases de datos. McGraw-Hill. </li>
   <li>Elmasri, R., & Navathe, S. (2016). Sistemas de bases de datos. Pearson. </li>
