@@ -117,8 +117,8 @@ El sistema está pensado para que el usuario pueda cargar o conectarse a una bas
 
 ### Actores
 
-- Usuario (desarrollador o analista)  
-- Sistema de IA  
+- Usuario (desarrollador o analista): es quien utiliza el sistema para analizar la base de datos. 
+- Sistema de IA: se encarga de procesar la información y generar los resultados automáticamente.
 
 ### Casos de uso principales
 
@@ -151,6 +151,8 @@ En esta vista se muestra cómo está organizado el sistema internamente. Para ha
 
 ## 3.2.1 Diagrama de Subsistemas (paquetes)
 
+El sistema está dividido en partes que trabajan de forma independiente pero conectadas entre sí:
+
 - Data Input  
 - Data Analyzer  
 - AI Engine  
@@ -159,9 +161,16 @@ En esta vista se muestra cómo está organizado el sistema internamente. Para ha
 
 ## 3.2.2 Diagrama de Secuencia (vista de diseño)
 
-El proceso inicia cuando el usuario carga una base de datos, pasa por análisis estructural, luego por inteligencia artificial y finalmente genera documentación y reportes.
+El diagrama de secuencia permite representar de manera ordenada cómo se ejecutan las operaciones dentro del sistema a lo largo del tiempo. En este caso, muestra el flujo completo desde que el usuario interactúa con la aplicación hasta que obtiene los resultados finales.
+
+El proceso inicia cuando el usuario carga o conecta una base de datos. A partir de ese momento, el sistema envía la información al módulo de análisis, donde se procesan las tablas, campos y relaciones. Luego, esta información es enviada al módulo de inteligencia artificial, que se encarga de interpretar la estructura y generar tanto la documentación como el análisis crítico.
+
+Finalmente, los resultados pasan al módulo de reportes, donde se organizan y se presentan al usuario en forma de documentación estructurada y un informe de auditoría.
+
 
 ## 3.2.3 Diagrama de Colaboración (vista de diseño)
+
+Para entender mejor cómo funciona el sistema, se utilizan diferentes tipos de diagramas:
 
 - Diagrama de secuencia: flujo del proceso  
 - Diagrama de colaboración: interacción de módulos  
@@ -169,6 +178,10 @@ El proceso inicia cuando el usuario carga una base de datos, pasa por análisis 
 - Diagrama de clases  
 
 ## 3.2.4 Diagrama de Objetos
+
+El diagrama de objetos muestra una representación más concreta del sistema en un momento específico, es decir, cómo se ven los datos cuando ya están siendo procesados.
+En este caso, los objetos principales están relacionados con elementos de la base de datos, como:
+
 
 Incluye:
 
@@ -178,29 +191,36 @@ Incluye:
 
 ## 3.2.5 Diagrama de Clases
 
+El diagrama de clases representa la estructura interna del sistema desde un punto de vista más técnico, mostrando las clases, sus atributos y los métodos que utilizan.
+
+En el sistema propuesto, se pueden identificar clases como:
+
 Clases principales:
 
-- BaseDeDatos  
-- Tabla  
-- Columna  
-- Relacion  
-- Analizador  
-- GeneradorDocumentacion  
-- MotorIA  
+- BaseDeDatos: contiene la información general del esquema
+- Tabla: representa cada entidad de la base de datos  
+- Columna: define los atributos de cada tabla  
+- Relacion: representa las conexiones entre tablas  
+- Analizador: encargado de procesar la estructura  
+- GeneradorDocumentacion: produce la documentación  
+- MotorIA: realiza el análisis inteligente  
 
 ## 3.2.6 Diagrama de Base de Datos (relacional o no relacional)
 
-Analiza:
-
+El sistema trabaja con bases de datos relacionales, analizando elementos como:
 - Tablas  
 - Campos  
 - Claves primarias  
 - Claves foráneas  
 - Relaciones  
 
+Además, puede detectar problemas como redundancia de datos o relaciones mal definidas.
+
 ---
 
 ## 3.3 Vista de Implementación (vista de desarrollo)
+
+El sistema está construido siguiendo una arquitectura por capas, lo que permite organizar mejor el desarrollo.
 
 ### Capas
 
@@ -211,27 +231,41 @@ Analiza:
 
 ## 3.3.1 Diagrama de arquitectura software (paquetes)
 
-Sistema modular con separación de responsabilidades.
+El sistema está organizado en diferentes módulos o paquetes que cumplen funciones específicas dentro de la aplicación. Esta división permite que cada parte del sistema trabaje de forma independiente, lo cual facilita tanto el desarrollo como el mantenimiento.
+
+Cada paquete se encarga de una responsabilidad concreta, por ejemplo: la entrada de datos, el análisis, la generación de documentación y la gestión de reportes. Esta separación ayuda a evitar dependencias innecesarias entre componentes, lo que significa que si se necesita modificar una parte del sistema (por ejemplo, mejorar el módulo de inteligencia artificial), no será necesario afectar el resto de la aplicación.
+
 
 ## 3.3.2 Diagrama de arquitectura del sistema (Diagrama de componentes)
 
-Incluye:
+El diagrama de componentes muestra cómo está construido el sistema a nivel más técnico, es decir, cómo se conectan sus partes principales y cómo interactúan entre sí.
 
-- Frontend  
-- Backend API  
-- Motor de análisis  
-- Servicio de IA  
-- Base de datos  
+El sistema se encuentra dividido en varias capas:
+
+- Interfaz de usuario (Frontend): donde el usuario interactúa con el sistema 
+- API Backend: donde se gestionan las solicitudes y la lógica del sistema
+- Motor de análisis: encargado de procesar la estructura de la base de datos 
+- Servicio de inteligencia artificial: responsable de generar la documentación y el análisis
+- Base de datos: donde se almacenan configuraciones o resultado
+
+Cada componente cumple una función específica, pero todos trabajan de manera conjunta para lograr el objetivo del sistema. Este tipo de arquitectura permite tener un sistema más ordenado, fácil de entender y más sencillo de mantener.
 
 ---
 
 ## 3.4 Vista de Procesos
 
-Describe cómo funciona el sistema internamente.
+La vista de procesos describe cómo funciona el sistema internamente en términos de ejecución. Aquí se analiza cómo se llevan a cabo las tareas principales y cómo se comunican los distintos procesos entre sí.
+
+El sistema sigue una secuencia lógica de procesamiento donde cada módulo cumple un rol dentro del flujo general. Por ejemplo, primero se recibe la base de datos, luego se procesa, después se analiza y finalmente se generan los resultados.
+
+También se pueden identificar procesos que pueden ejecutarse de manera independiente o paralela, como la generación de documentación y el análisis de auditoría, lo que ayuda a mejorar el rendimiento del sistema.
+
 
 ## 3.4.1 Diagrama de Procesos del sistema (diagrama de actividad)
 
-Flujo:
+El diagrama de actividad permite representar gráficamente el flujo de trabajo del sistema, mostrando las diferentes etapas por las que pasa la información.
+
+El proceso general incluye:
 
 - Recepción de la base de datos  
 - Validación de la estructura  
@@ -245,43 +279,52 @@ Flujo:
 
 ## 3.5 Vista de Despliegue (vista física)
 
-Arquitectura cliente-servidor.
+La vista de despliegue describe cómo el sistema se implementa en el entorno real, es decir, en qué dispositivos o servidores se ejecuta cada componente.
+
+El sistema utiliza una arquitectura cliente-servidor, donde el usuario accede a través de un navegador web, mientras que el procesamiento se realiza en un servidor.
+
+También se puede considerar el uso de servicios en la nube para el procesamiento de inteligencia artificial, lo que permite mejorar el rendimiento y la escalabilidad del sistema.
 
 ## 3.5.1 Diagrama de despliegue
 
+El diagrama de despliegue muestra los elementos físicos que componen el sistema y cómo se conectan entre sí.
+
 Incluye:
 
-- Cliente (navegador web)  
-- Servidor de aplicaciones  
-- Servicio de IA  
-- Base de datos  
+- Cliente (navegador web): donde el usuario interactúa  
+- Servidor de aplicaciones: donde se ejecuta el backend  
+- Servicio de IA: encargado del análisis inteligente  
+- Base de datos: almacenamiento de información  
 
 ---
 
 # 4 Atributos de Calidad del Software
 
+Los atributos de calidad permiten evaluar qué tan bien el sistema cumple con ciertos criterios importantes, más allá de solo funcionar correctamente. Estos atributos ayudan a medir aspectos como rendimiento, seguridad, facilidad de uso, entre otros.
+
 ## Escenario de Funcionalidad
 
-El sistema cumple con su objetivo principal de análisis y documentación automática, incluyendo recomendaciones.
+El sistema cumple con su objetivo principal, que es analizar bases de datos y generar documentación de forma automática. Además, ofrece funcionalidades adicionales como la detección de errores y la generación de recomendaciones, lo que aporta un valor extra al usuario. 
 
 ## Escenario de Usabilidad
 
-Interfaz clara y fácil de usar.
+El sistema está diseñado para ser fácil de usar, permitiendo que el usuario pueda interactuar sin necesidad de conocimientos avanzados. La interfaz es clara y los resultados se presentan de manera comprensible, lo que facilita su interpretación. 
 
 ## Escenario de Confiabilidad
 
-Resultados consistentes y seguros.
+El sistema garantiza que la información analizada se mantenga íntegra y que los resultados generados sean consistentes. Además, se busca minimizar errores durante el procesamiento de datos. 
 
 ## Escenario de Rendimiento
 
-Procesamiento eficiente incluso con grandes volúmenes.
+El sistema está optimizado para procesar información en tiempos razonables, incluso cuando se trabaja con bases de datos de tamaño considerable. Se busca un equilibrio entre velocidad y uso eficiente de recursos. 
 
 ## Escenario de Mantenibilidad
 
-Sistema modular que permite mejoras.
+Gracias a su diseño modular, el sistema puede ser modificado o ampliado sin afectar su funcionamiento general. Esto permite realizar mejoras de forma progresiva. 
 
 ## Otros Escenarios
 
-Soporta múltiples solicitudes simultáneamente.
+El sistema puede manejar múltiples solicitudes al mismo tiempo, manteniendo estabilidad en su funcionamiento. Esto es importante especialmente si se piensa en un uso a mayor escala o en entornos reales. 
+
 
 ---
