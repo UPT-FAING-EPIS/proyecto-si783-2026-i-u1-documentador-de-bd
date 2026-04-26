@@ -1,4 +1,8 @@
-![C:\\Users\\EPIS\\Documents\\upt.png][image1]
+<center>
+
+[comment]: <img src="./media/media/image1.png" style="width:1.088in;height:1.46256in" alt="escudo.png" />
+
+![./media/media/image1.png](./media/logo-upt.png)
 
 **UNIVERSIDAD PRIVADA DE TACNA**
 
