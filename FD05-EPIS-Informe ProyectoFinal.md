@@ -35,7 +35,8 @@
 **Versión 1.0**
 
 ---
-# ÍNDICE GENERAL
+
+
 # ÍNDICE GENERAL
 
 - [Antecedentes](#antecedentes)
