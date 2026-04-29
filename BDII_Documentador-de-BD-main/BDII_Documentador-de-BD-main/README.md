@@ -96,6 +96,52 @@ Visita `http://localhost:3000` en tu navegador.
 
 ---
 
+## 🧪 Testing y Verificación
+
+### Archivos de Prueba Incluidos
+- `ejemplo_relacional.sql` - Esquema SQL de ejemplo
+- `ejemplo_nosql.json` - Datos JSON de ejemplo
+- `ejemplo_biblioteca.sql` - Base de datos de biblioteca completa
+
+### Comandos Útiles
+```bash
+# Verificar sintaxis del servidor
+npm run check-syntax
+
+# Iniciar servidor
+npm start
+
+# Verificar que el servidor responde
+curl http://localhost:3000
+```
+
+### Formatos Soportados
+- **SQL**: `.sql` (MySQL, PostgreSQL, etc.)
+- **JSON**: `.json` (MongoDB, Firebase, etc.)
+- **Excel**: `.xlsx` (Reportes, datos tabulares)
+- **Otros**: `.txt`, `.dbml`, `.prisma`, `.graphql`, `.csv`, `.js`, `.ts`, `.yaml`, `.yml`
+
+---
+
+## 🔧 Troubleshooting
+
+### Problemas Comunes
+- **Puerto ocupado**: Si el puerto 3000 está en uso, el servidor usará automáticamente el 3001
+- **API Key faltante**: Asegúrate de tener `OPENAI_API_KEY` en tu archivo `.env`
+- **Archivo no soportado**: Verifica que la extensión del archivo esté en la lista de formatos soportados
+- **Error de conversión**: Algunos esquemas complejos pueden requerir ajustes manuales
+
+### Verificación de Dependencias
+```bash
+# Verificar instalación de paquetes
+npm list
+
+# Verificar versión de Node.js
+node --version
+```
+
+---
+
 ## 📄 Licencia
 Este proyecto está bajo la Licencia **MIT**. Siéntete libre de usarlo, modificarlo y compartirlo.
 

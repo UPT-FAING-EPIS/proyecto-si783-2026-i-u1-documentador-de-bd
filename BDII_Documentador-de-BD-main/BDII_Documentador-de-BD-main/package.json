@@ -5,7 +5,10 @@
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
-    "dev": "node server.js"
+    "dev": "node server.js",
+    "test": "echo \"No tests specified\" && exit 0",
+    "server": "node server.js",
+    "check-syntax": "node -c server.js"
   },
   "keywords": [
     "database",
