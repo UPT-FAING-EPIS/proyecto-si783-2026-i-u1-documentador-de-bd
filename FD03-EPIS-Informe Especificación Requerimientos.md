@@ -4,30 +4,35 @@
 
 ![./media/media/image1.png](./media/logo-upt.png)
 
-**UNIVERSIDAD PRIVADA DE TACNA**
+# UNIVERSIDAD PRIVADA DE TACNA
+## FACULTAD DE INGENIERÍA
+### Escuela Profesional de Ingeniería de Sistemas
 
-**FACULTAD DE INGENIERIA**
+**Proyecto:** Sistema de documentación de Base de Datos
 
-**Escuela Profesional de Ingeniería de Sistemas**
+**Curso:** Base de Datos II
+**Docente:** Mag. Patrick Cuadros Quiroga
 
- **Proyecto: Sistema de documentación de Base de Datos**
+**Integrantes:**
+- Andia Navarro, Diego Fabrizio (2022073906)
+- Quispe Chileno, Clara Briyith Mayra (2024080129)
 
-Curso: Base de Datos II
+**Tacna – Perú**
+**2026**
 
-Docente: Mag. Patrick Cuadros Quiroga
+---
 
-Integrantes:
+# CONTROL DE VERSIONES
 
-**Andia Navarro, Diego Fabrizio (2022073906)**  
-**Quispe Chileno, Clara Briyith Mayra (2024080129)**
+| Versión | Hecha por | Revisada por | Aprobada por | Fecha | Motivo |
+|--------|----------|-------------|--------------|-------|--------|
+| 1.0 | DAN,CQC | DAN,CQC | ARV | 10/10/2020 | Versión Original |
 
-**Tacna – Perú**  
-***2026***
+---
 
+# **Sistema de documentación de base de datos**
 
-**  
-**
-</center>
+# **Especificación de Requerimientos**
 
 
 <div style="page-break-after: always; visibility: hidden">\pagebreak</div>

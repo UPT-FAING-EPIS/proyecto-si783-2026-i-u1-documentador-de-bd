@@ -4,27 +4,33 @@
 
 ![./media/media/image1.png](./media/logo-upt.png)
 
-**UNIVERSIDAD PRIVADA DE TACNA**
+# UNIVERSIDAD PRIVADA DE TACNA
+## FACULTAD DE INGENIERÍA
+### Escuela Profesional de Ingeniería de Sistemas
 
-**FACULTAD DE INGENIERÍA**
+**Proyecto:** Sistema de documentación de Base de Datos
 
-**Escuela Profesional de Ingeniería de Sistemas**
+**Curso:** Base de Datos II
+**Docente:** Mag. Patrick Cuadros Quiroga
 
- **Proyecto: Sistema de documentación de Base de Datos**
+**Integrantes:**
+- Andia Navarro, Diego Fabrizio (2022073906)
+- Quispe Chileno, Clara Briyith Mayra (2024080129)
 
-Curso: Base de Datos II
+**Tacna – Perú**
+**2026**
 
-Docente: Mag. Patrick Cuadros Quiroga
+---
 
-Integrantes:
+# CONTROL DE VERSIONES
 
-**Andia Navarro, Diego Fabrizio (2022073906)**  
-**Quispe Chileno, Clara Briyith Mayra (2024080129)**
+| Versión | Hecha por | Revisada por | Aprobada por | Fecha | Motivo |
+|--------|----------|-------------|--------------|-------|--------|
+| 1.0 | DAN,CQC | DAN,CQC | ARV | 10/10/2020 | Versión Original |
 
-**Tacna – Perú**  
-***2026***
+---
 
-# **Sistema *de documentación de base de datos***
+# **Sistema de documentación de base de datos**
 
 # **Informe de Factibilidad**
 
@@ -139,30 +145,32 @@ Las estaciones de trabajo estarán destinadas a los desarrolladores y posibles u
 Arquitectura del sistema  
 Para el correcto funcionamiento del sistema documentador, se consideran dos componentes principales:
 
-1. Lado del servidor (Backend y Base de Datos)
+1. Lado del servidor (Backend y API)
 
-En este componente se gestionará la lógica del sistema, la conexión a bases de datos externas y la generación de documentación.
+En este componente se gestionará la lógica del sistema, el procesamiento de archivos, la integración con IA y la generación de documentación.
 
-* Lenguaje de programación: Python  
-* Framework backend: Flask o Django  
-* Servidor de aplicaciones: Apache HTTP Server o Nginx.  
-* Base de datos: PostgreSQL o MySQL, para almacenar configuraciones, usuarios y documentación generada.  
-* Entorno de desarrollo: Visual Studio Code u otro IDE compatible.  
-* Sistema operativo: Linux (Ubuntu o Debian) para entorno de producción.  
-* Conectividad: Acceso a bases de datos externas para extracción de metadatos.  
-2. Lado del cliente (Frontend y acceso de usuario)
+* Lenguaje de programación: Node.js  
+* Framework backend: Express.js  
+* API de IA: OpenAI GPT-4o-mini  
+* Servidor de aplicaciones: Node.js integrado  
+* Librerías principales: Multer (manejo de archivos), XLSX (procesamiento Excel), CORS  
+* Entorno de desarrollo: Visual Studio Code  
+* Sistema operativo: Linux (Ubuntu/Debian) para desarrollo y producción  
 
-Este componente permitirá a los usuarios interactuar con el sistema, visualizar la estructura de las bases de datos y generar documentación.
+2. Lado del cliente (Frontend)
 
+Este componente permitirá a los usuarios interactuar con el sistema, subir archivos, visualizar resultados y generar documentación.
+
+* Tecnologías web:  
+  * HTML5  
+  * CSS3 con diseño Glassmorphism  
+  * JavaScript ES6+  
+* Librerías: Mermaid.js (diagramas), Marked.js (Markdown)  
 * Navegadores compatibles:  
   * Google Chrome  
   * Mozilla Firefox  
   * Microsoft Edge  
-* Tecnologías web:  
-  * HTML5  
-  * CSS3  
-  * JavaScript  
-  * Bootstrap
+* Diseño: Interfaz responsive y moderna
 
 4. Estudio de Factibilidad
 
@@ -174,15 +182,17 @@ Se espera como resultado confirmar que el proyecto es viable, sostenible y benef
 
 1. Factibilidad Técnica
 
-Actualmente, el equipo de desarrollo está conformado por un pequeño grupo de personas, donde cada integrante dispone de su propia laptop o computadora personal.
+Actualmente, el equipo de desarrollo está conformado por estudiantes de Ingeniería de Sistemas con conocimientos en desarrollo web y bases de datos.
 
-* Equipos de desarrollo: Computadoras con procesadores Intel Core i3 o superior, 8 GB de memoria RAM y almacenamiento mínimo de 256 GB en disco SSD o HDD.  
-* Servidor de pruebas: Puede utilizarse un equipo local o un servidor VPS con sistema operativo Linux, con una configuración mínima de 2 CPU, 4 GB de RAM.  
-* Cliente final: El sistema podrá ser utilizado desde cualquier dispositivo con acceso a un navegador moderno, lo que facilita su accesibilidad.  
+* Equipos de desarrollo: Computadoras con procesadores Intel Core i3 o superior, 8 GB de memoria RAM y almacenamiento mínimo de 256 GB en disco SSD.  
+* Tecnologías principales: Node.js, Express.js, OpenAI API, HTML5/CSS3/JavaScript.  
+* Librerías y frameworks: Multer, XLSX, Mermaid.js, Marked.js, CORS.  
+* Servidor de desarrollo: Node.js integrado con capacidad de procesamiento local.  
+* Cliente final: El sistema podrá ser utilizado desde cualquier dispositivo con acceso a un navegador moderno, facilitando su accesibilidad.  
 * Navegadores compatibles: Google Chrome, Mozilla Firefox, Microsoft Edge y otros navegadores modernos compatibles con tecnologías HTML5, CSS3 y JavaScript.  
 * Sistemas operativos compatibles:  
   * Desarrollo: Windows 10/11 y Linux (Ubuntu).  
-  * Producción: Ubuntu Server o Debian.
+  * Producción: Linux (Ubuntu Server/Debian) con Node.js.
 
   2. Factibilidad Económica
 
