@@ -1,368 +1,335 @@
-<center>
+<div align="center">
 
-[comment]: <img src="./media/media/image1.png" style="width:1.088in;height:1.46256in" alt="escudo.png" />
+![Logo UPT](./media/logo-upt.png)
 
-![./media/media/image1.png](./media/logo-upt.png)
+<br>
 
-# UNIVERSIDAD PRIVADA DE TACNA  
-## FACULTAD DE INGENIERÍA  
-### Escuela Profesional de Ingeniería de Sistemas  
+**UNIVERSIDAD PRIVADA DE TACNA**
 
-**Proyecto:** Sistema de documentación de Base de Datos  
+**FACULTAD DE INGENIERÍA**
 
-**Curso:** Base de Datos II  
-**Docente:** Mag. Patrick Cuadros Quiroga  
+**Escuela Profesional de Ingeniería de Sistemas**
 
-**Integrantes:**  
-- Andia Navarro, Diego Fabrizio (2022073906)  
-- Quispe Chileno, Clara Briyith Mayra (2024080129)  
+**Proyecto *Sistema de Documentación de Base de Datos***
 
-**Tacna – Perú**  
-**2026**
+Curso: *Base de Datos II*
 
----
+Docente: *Mag. Patrick Cuadros Quiroga*
 
-# CONTROL DE VERSIONES
+Integrantes:
 
+***Andia Navarro, Diego Fabrizio (2022073906)***
+
+***Quispe Chileno, Clara Briyith Mayra (2024080129)***
+
+**Tacna – Perú**
+
+***2026***
+
+</div>
+
+<div style="page-break-after: always; visibility: hidden">\pagebreak</div>
+
+Sistema *de documentación de base de datos*
+
+Documento de Arquitectura de Software
+
+Versión *{1.0}*
+
+| CONTROL DE VERSIONES | | | | | |
+| :-: | :- | :- | :- | :- | :- |
 | Versión | Hecha por | Revisada por | Aprobada por | Fecha | Motivo |
-|--------|----------|-------------|--------------|-------|--------|
-| 1.0 | DAN,CQC | DAN,CQC | ARV | 10/10/2020 | Versión Original |
+| 1.0 | DAN, CQC | DAN, CQC | DAN CQC | 04/06/2026 | Versión Original |
 
----
+| CONTROL DE VERSIONES | | | | | |
+| :-: | :- | :- | :- | :- | :- |
+| Versión | Hecha por | Revisada por | Aprobada por | Fecha | Motivo |
+| 1.0 | MPV | ELV | ARV | 10/10/2020 | Versión Original |
 
-# DOCUMENTO Arquitectura de Software
-## Sistema de documentación de Base de Datos  
-**Versión 1.0**
-
----
+<div style="page-break-after: always; visibility: hidden">\pagebreak</div>
 
 # ÍNDICE GENERAL
 
-1. [Introducción](#1-introducción)  
-   - [1.1 Propósito (Diagrama 4+1)](#11-propósito-diagrama-41)  
-   - [1.2 Alcance](#12-alcance)  
-   - [1.3 Definición, siglas y abreviaturas](#13-definición-siglas-y-abreviaturas)  
-   - [1.4 Organización del documento](#14-organización-del-documento)  
+[1. INTRODUCCIÓN](#introducción)
 
-2. [Objetivos y Restricciones Arquitectónicas](#2-objetivos-y-restricciones-arquitectónicas)  
-   - [2.1 Priorización de requerimientos](#21-priorización-de-requerimientos)  
-   - [2.2 Requerimientos Funcionales](#22-requerimientos-funcionales)  
-   - [2.3 Requerimientos No Funcionales](#23-requerimientos-no-funcionales--atributos-de-calidad)  
-   - [2.4 Restricciones](#24-restricciones)  
+[1.1. Propósito (Diagrama 4+1)](#propósito-diagrama-41)
 
-3. [Representación de la Arquitectura del Sistema](#3-representación-de-la-arquitectura-del-sistema)  
-   - [3.1 Vista de Caso de Uso](#31-vista-de-caso-de-uso)  
-   - [3.1.1 Diagramas de Casos de Uso](#311-diagramas-de-casos-de-uso)  
-   - [3.2 Vista Lógica](#32-vista-lógica)  
-   - [3.2.1 Diagrama de Subsistemas](#321-diagrama-de-subsistemas-paquetes)  
-   - [3.2.2 Diagrama de Secuencia](#322-diagrama-de-secuencia-vista-de-diseño)  
-   - [3.2.3 Diagrama de Colaboración](#323-diagrama-de-colaboración-vista-de-diseño)  
-   - [3.2.4 Diagrama de Objetos](#324-diagrama-de-objetos)  
-   - [3.2.5 Diagrama de Clases](#325-diagrama-de-clases)  
-   - [3.2.6 Diagrama de Base de Datos](#326-diagrama-de-base-de-datos-relacional-o-no-relacional)  
-   - [3.3 Vista de Implementación](#33-vista-de-implementación-vista-de-desarrollo)  
-   - [3.3.1 Arquitectura Software](#331-diagrama-de-arquitectura-software-paquetes)  
-   - [3.3.2 Diagrama de Componentes](#332-diagrama-de-arquitectura-del-sistema-diagrama-de-componentes)  
-   - [3.4 Vista de Procesos](#34-vista-de-procesos)  
-   - [3.4.1 Diagrama de Actividad](#341-diagrama-de-procesos-del-sistema-diagrama-de-actividad)  
-   - [3.5 Vista de Despliegue](#35-vista-de-despliegue-vista-física)  
-   - [3.5.1 Diagrama de Despliegue](#351-diagrama-de-despliegue)  
+[1.2. Alcance](#alcance)
 
-4. [Atributos de Calidad del Software](#4-atributos-de-calidad-del-software)  
+[1.3. Definición, siglas y abreviaturas](#definición-siglas-y-abreviaturas)
 
----
+[1.4. Organización del documento](#organización-del-documento)
 
-# 1 Introducción
+[2. OBJETIVOS Y RESTRICCIONES ARQUITECTÓNICAS](#objetivos-y-restricciones-arquitectónicas)
 
-## 1.1 Propósito (Diagrama 4+1)
+[2.1. Requerimientos Funcionales](#requerimientos-funcionales)
 
-El presente documento tiene como propósito describir la arquitectura del sistema de documentación inteligente de bases de datos basado en inteligencia artificial, proporcionando una visión global de su diseño, estructura y funcionamiento.
+[2.2. Requerimientos No Funcionales – Atributos de Calidad](#requerimientos-no-funcionales--atributos-de-calidad)
 
-El sistema está orientado a automatizar la generación de documentación técnica, análisis estructural y auditoría de bases de datos, permitiendo identificar relaciones, inconsistencias y oportunidades de mejora. Se consideran tanto los requisitos funcionales como no funcionales, priorizando aspectos como la eficiencia en el procesamiento de datos, la escalabilidad del sistema y la facilidad de uso.
+[3. REPRESENTACIÓN DE LA ARQUITECTURA DEL SISTEMA](#representación-de-la-arquitectura-del-sistema)
 
-Se adopta el modelo arquitectónico 4+1 para representar las distintas perspectivas del sistema, permitiendo una comprensión integral desde el punto de vista lógico, de desarrollo, procesos y despliegue.
+[3.1. Vista de Caso de uso](#vista-de-caso-de-uso)
 
-## 1.2 Alcance
+[3.1.1. Diagramas de Casos de uso](#diagramas-de-casos-de-uso)
 
-El documento abarca la definición de la arquitectura del sistema enfocado en la generación automatizada de documentación de bases de datos mediante inteligencia artificial.
+[3.2. Vista Lógica](#vista-lógica)
 
-Se incluye el diseño lógico del sistema, la interacción entre sus componentes principales, así como los mecanismos de análisis de datos y generación de reportes. Se consideran las vistas más relevantes del modelo 4+1, omitiendo detalles excesivamente técnicos que no aporten valor al entendimiento general del sistema.
+[3.2.1. Diagrama de Subsistemas (paquetes)](#diagrama-de-subsistemas-paquetes)
 
-## 1.3 Definición, siglas y abreviaturas
+[3.2.2. Diagrama de Secuencia (vista de diseño)](#diagrama-de-secuencia-vista-de-diseño)
 
-- IA: Inteligencia Artificial  
-- BD: Base de Datos  
-- SRS: Especificación de Requisitos de Software  
-- SAD: Documento de Arquitectura de Software  
-- API: Interfaz de Programación de Aplicaciones  
-- ER: Modelo Entidad-Relación  
-- SQL: Lenguaje de Consulta Estructurado  
+[3.2.3. Diagrama de Colaboración (vista de diseño)](#diagrama-de-colaboración-vista-de-diseño)
 
-## 1.4 Organización del documento
+[3.2.4. Diagrama de Objetos](#diagrama-de-objetos)
 
-El documento se encuentra estructurado en secciones que describen los objetivos del sistema, sus restricciones, la representación arquitectónica mediante distintas vistas y los atributos de calidad del software. Cada sección permite comprender el sistema desde diferentes perspectivas, facilitando su análisis, desarrollo e implementación.
+[3.2.5. Diagrama de Clases](#diagrama-de-clases)
 
----
+[3.2.6. Diagrama de Base de datos (relacional o no relacional)](#diagrama-de-base-de-datos-relacional-o-no-relacional)
 
-# 2 Objetivos y Restricciones Arquitectónicas
+[3.3. Vista de Implementación (vista de desarrollo)](#vista-de-implementación-vista-de-desarrollo)
 
-## 2.1 Priorización de requerimientos
+[3.3.1. Diagrama de arquitectura software (paquetes)](#diagrama-de-arquitectura-software-paquetes)
 
-| ID | Descripción | Prioridad |
-|----|------------|----------|
-| RQ01 | Generar documentación automática de bases de datos | Alta |
-| RQ02 | Analizar relaciones entre tablas | Alta |
-| RQ03 | Detectar errores de diseño | Alta |
-| RQ04 | Generar recomendaciones de optimización | Media |
-| RQ05 | Exportar documentación en formatos estándar | Media |
+[3.3.2. Diagrama de arquitectura del sistema (Diagrama de componentes)](#diagrama-de-arquitectura-del-sistema-diagrama-de-componentes)
 
-## 2.2 Requerimientos Funcionales
+[3.4. Vista de procesos](#vista-de-procesos)
 
-| ID | Descripción | Prioridad |
-|----|------------|----------|
-| RF01 | Importar estructura de base de datos | Alta |
-| RF02 | Generar diccionario de datos | Alta |
-| RF03 | Identificar claves primarias y foráneas | Alta |
-| RF04 | Analizar integridad referencial | Alta |
-| RF05 | Generar reportes técnicos | Media |
+[3.4.1. Diagrama de Procesos del sistema (diagrama de actividad)](#diagrama-de-procesos-del-sistema-diagrama-de-actividad)
 
-## 2.3 Requerimientos No Funcionales – Atributos de Calidad
+[3.5. Vista de Despliegue (vista física)](#vista-de-despliegue-vista-física)
 
-| ID | Descripción | Prioridad |
-|----|------------|----------|
-| RNF01 | Tiempo de respuesta eficiente | Alta |
-| RNF02 | Escalabilidad del sistema | Alta |
-| RNF03 | Seguridad de los datos | Alta |
-| RNF04 | Usabilidad de la interfaz | Media |
-| RNF05 | Mantenibilidad del sistema | Media |
+[3.5.1. Diagrama de despliegue](#diagrama-de-despliegue)
 
-## 2.4 Restricciones
+[4. ATRIBUTOS DE CALIDAD DEL SOFTWARE](#atributos-de-calidad-del-software)
 
-- Dependencia de modelos de inteligencia artificial para el análisis  
-- Necesidad de conexión a internet para procesamiento avanzado  
-- Compatibilidad con motores de base de datos específicos (MySQL, PostgreSQL)  
-- Limitaciones en el análisis si la base de datos está incompleta o mal estructurada  
+[4.1. Escenario de Funcionalidad](#escenario-de-funcionalidad)
 
----
+[4.2. Escenario de Usabilidad](#escenario-de-usabilidad)
 
-# 3 Representación de la Arquitectura del Sistema
+[4.3. Escenario de confiabilidad](#escenario-de-confiabilidad)
 
-## 3.1 Vista de Caso de Uso
+[4.4. Escenario de rendimiento](#escenario-de-rendimiento)
 
-Esta vista permite entender cómo interactúan los usuarios con el sistema y cuáles son las funciones principales que este ofrece.
+[4.5. Escenario de mantenibilidad](#escenario-de-mantenibilidad)
 
-El sistema está pensado para que el usuario pueda cargar o conectarse a una base de datos, analizar su estructura y, a partir de eso, generar automáticamente una documentación completa junto con un informe que evalúe el estado de la base de datos.
+[4.6. Otros Escenarios](#otros-escenarios)
 
-### Actores
+<div style="page-break-after: always; visibility: hidden">\pagebreak</div>
 
-- Usuario (desarrollador o analista): es quien utiliza el sistema para analizar la base de datos. 
-- Sistema de IA: se encarga de procesar la información y generar los resultados automáticamente.
+# **1.** INTRODUCCIÓN
 
-### Casos de uso principales
+## **1.1.** Propósito (Diagrama 4+1)
 
-- Cargar o conectar una base de datos  
-- Analizar la estructura de la base de datos  
-- Identificar relaciones entre tablas  
-- Generar documentación automática  
-- Obtener un reporte de auditoría  
-- Exportar los resultados  
+El presente documento constituye el Documento de Arquitectura de Software del Sistema de Documentación de Base de Datos, desarrollado por DB Smart Solutions S.A.C. Su propósito es describir de manera formal, precisa y completa la arquitectura del sistema desde múltiples perspectivas complementarias, facilitando la comprensión, mantenimiento y evolución del mismo.
 
-## 3.1.1 Diagramas de Casos de Uso
+Este documento adopta el modelo de vistas arquitectónicas propuesto por Philippe Kruchten, que organiza la descripción de la arquitectura en cinco vistas. La Vista de Casos de Uso describe los escenarios de uso que guían y validan las decisiones arquitectónicas, siendo su audiencia principal todos los interesados. La Vista Lógica describe la descomposición del sistema en subsistemas, clases y sus relaciones, orientada a diseñadores y desarrolladores. La Vista de Implementación describe la organización del software en módulos, paquetes y componentes, dirigida al equipo de desarrollo. La Vista de Procesos describe el comportamiento dinámico del sistema en tiempo de ejecución, orientada a arquitectos e integradores. La Vista de Despliegue describe la topología física donde se despliega el sistema, dirigida a administradores e infraestructura.
 
-Los diagramas permiten representar de forma más clara cómo el usuario interactúa con el sistema. A través de distintos escenarios, se puede ver el flujo desde que se carga la base de datos hasta que se obtiene la documentación final.
+## **1.2.** Alcance
 
-Estos diagramas ayudan a validar que el sistema cumple con lo que se espera y permiten detectar posibles mejoras en el proceso.
+Este documento describe la arquitectura del Sistema de Documentación de Base de Datos en su versión 1.0, un sistema web que integra los siguientes componentes: un servidor backend en Node.js con Express como orquestador central; un motor de análisis local en Python con las librerías sqlglot, pandas, networkx y Faker; un servicio de análisis en la nube para la generación de documentación descriptiva; un sistema de gestión de usuarios, autenticación y almacenamiento de documentación en la nube; y un frontend web desarrollado en HTML5, CSS3 y JavaScript con Mermaid.js para la renderización de diagramas Entidad-Relación.
 
----
+## **1.3.** Definición, siglas y abreviaturas
 
-## 3.2 Vista Lógica
+- SAD: Software Architecture Document, Documento de Arquitectura de Software.
 
-En esta vista se muestra cómo está organizado el sistema internamente. Para hacerlo más claro, el sistema se divide en módulos, donde cada uno cumple una función específica.
+- API: Application Programming Interface, Interfaz de Programación de Aplicaciones.
 
-### Módulos principales
+- REST: Representational State Transfer, estilo arquitectónico para servicios web.
 
-- Módulo de entrada de datos  
-- Módulo de análisis estructural  
-- Módulo de inteligencia artificial  
-- Módulo de documentación  
-- Módulo de reportes  
+- JWT: JSON Web Token, estándar de tokens para autenticación segura.
 
-## 3.2.1 Diagrama de Subsistemas (paquetes)
+- RLS: Row Level Security, seguridad a nivel de fila en bases de datos relacionales.
 
-El sistema está dividido en partes que trabajan de forma independiente pero conectadas entre sí:
+- ORM: Object-Relational Mapping, mapeo objeto-relacional.
 
-- Data Input  
-- Data Analyzer  
-- AI Engine  
-- Documentation Generator  
-- Report Manager  
+- ER: Entidad-Relación, modelo de representación de bases de datos.
 
-## 3.2.2 Diagrama de Secuencia (vista de diseño)
+- BaaS: Backend as a Service, backend como servicio en la nube.
 
-El diagrama de secuencia permite representar de manera ordenada cómo se ejecutan las operaciones dentro del sistema a lo largo del tiempo. En este caso, muestra el flujo completo desde que el usuario interactúa con la aplicación hasta que obtiene los resultados finales.
+- CORS: Cross-Origin Resource Sharing, política de intercambio de recursos entre orígenes.
 
-El proceso inicia cuando el usuario carga o conecta una base de datos. A partir de ese momento, el sistema envía la información al módulo de análisis, donde se procesan las tablas, campos y relaciones. Luego, esta información es enviada al módulo de inteligencia artificial, que se encarga de interpretar la estructura y generar tanto la documentación como el análisis crítico.
+- RBAC: Role-Based Access Control, control de acceso basado en roles.
 
-Finalmente, los resultados pasan al módulo de reportes, donde se organizan y se presentan al usuario en forma de documentación estructurada y un informe de auditoría.
+- SVG: Scalable Vector Graphics, formato de imagen vectorial.
 
+- FK: Foreign Key, clave foránea en bases de datos relacionales.
 
-## 3.2.3 Diagrama de Colaboración (vista de diseño)
+- PK: Primary Key, clave primaria en bases de datos relacionales.
 
-Para entender mejor cómo funciona el sistema, se utilizan diferentes tipos de diagramas:
+- UUID: Universally Unique Identifier, identificador único universal.
 
-- Diagrama de secuencia: flujo del proceso  
-- Diagrama de colaboración: interacción de módulos  
-- Diagrama de objetos  
-- Diagrama de clases  
+- JSONB: JSON Binary, formato binario de almacenamiento JSON en bases de datos relacionales.
 
-## 3.2.4 Diagrama de Objetos
+## **1.4.** Organización del documento
 
-El diagrama de objetos muestra una representación más concreta del sistema en un momento específico, es decir, cómo se ven los datos cuando ya están siendo procesados.
-En este caso, los objetos principales están relacionados con elementos de la base de datos, como:
+El documento está organizado siguiendo el modelo 4+1. La Sección 2 define los objetivos y restricciones que condicionan las decisiones arquitectónicas. La Sección 3 presenta las cinco vistas arquitectónicas del sistema con sus respectivos diagramas. La Sección 4 describe los atributos de calidad mediante escenarios de calidad concretos alineados con la norma ISO/IEC 25010:2011.
 
+<div style="page-break-after: always; visibility: hidden">\pagebreak</div>
 
-Incluye:
+# **2.** OBJETIVOS Y RESTRICCIONES ARQUITECTÓNICAS
 
-- Tablas (Usuario, Producto, Pedido)  
-- Columnas  
-- Relaciones (claves primarias y foráneas)  
+## **2.1.** Requerimientos Funcionales
 
-## 3.2.5 Diagrama de Clases
+| **Código** | **Requerimiento** | **Decisión arquitectónica** |
+| :- | :- | :- |
+| RF-01 | Autenticación de usuarios con roles | Uso de autenticación basada en tokens JWT con control de acceso RBAC implementado en el servidor Node.js mediante verificación del identificador de administrador en la cabecera de cada solicitud. |
+| RF-02 | Carga de archivos de esquemas en múltiples formatos | Uso de Multer en Node.js con almacenamiento en el directorio temporal del sistema operativo. |
+| RF-03 | Análisis técnico local de la estructura de la base de datos | Implementación de un motor Python independiente en main.py, invocado como proceso hijo desde Node.js mediante spawn, con comunicación JSON por la salida estándar del proceso. |
+| RF-04 | Generación de documentación descriptiva del esquema | Invocación asíncrona de un servicio externo de análisis desde el servidor Node.js, gestionando la clave de acceso en variables de entorno para evitar su exposición al cliente. |
+| RF-05 | Generación de diagramas Entidad-Relación interactivos | El motor Python genera el código Mermaid a partir del esquema analizado, y el frontend lo renderiza con la librería Mermaid.js directamente en el navegador del usuario. |
+| RF-06 | Exportación de documentación en PDF y Word | Generación del documento PDF en el lado del cliente mediante jsPDF, servido por Node.js desde las dependencias del proyecto. |
+| RF-07 | Almacenamiento de documentación en la nube | Uso de una tabla de documentos en la base de datos en la nube con campos de contenido en formato JSONB para almacenar el análisis completo de cada esquema procesado. |
+| RF-08 | Compartición de documentación entre usuarios | Uso de una tabla de elementos compartidos con claves foráneas a las tablas de documentos y usuarios, con políticas de seguridad a nivel de fila para el control de acceso por usuario. |
+| RF-09 | Panel de administración de usuarios | Implementación de endpoints REST exclusivos bajo la ruta /api/admin con verificación del rol de administrador en la tabla de perfiles de la base de datos. |
+| RF-10 | Registro de logs de actividad | Uso de una tabla de logs en la base de datos con políticas de seguridad que solo permiten lectura a usuarios con rol de administrador. |
+| RF-11 | Conversión de esquemas a múltiples formatos | Implementación de un módulo en Python, cuyos resultados se incluyen en la respuesta JSON del análisis devuelta al servidor. |
+| RF-12 | Generación de datos de prueba | Implementación la librería Faker, invocado con un indicador especial y recibiendo la entrada mediante JSON por la entrada estándar del proceso. |
 
-El diagrama de clases representa la estructura interna del sistema desde un punto de vista más técnico, mostrando las clases, sus atributos y los métodos que utilizan.
+## **2.2.** Requerimientos No Funcionales – Atributos de Calidad
 
-En el sistema propuesto, se pueden identificar clases como:
+| **Código** | **Requerimiento** | **Decisión arquitectónica** |
+| :- | :- | :- |
+| RNF-01 | Rendimiento: Análisis Python igual o menor a 10 segundos para esquemas de hasta 50 tablas | Ejecución del motor Python como proceso local sin latencia de red, con comunicación directa por entrada y salida estándar. |
+| RNF-02 | Rendimiento: Análisis con servicio externo igual o menor a 30 segundos | Invocación asíncrona con async/await y timeout configurado en el cliente. |
+| RNF-03 | Disponibilidad igual o superior al 99% mensual | Despliegue en una plataforma de distribución global con acuerdos de nivel de servicio superiores al 99.9%. |
+| RNF-04 | Seguridad: Credenciales nunca expuestas al cliente | Uso de variables de entorno mediante dotenv, actuando el servidor como proxy para todas las llamadas a servicios externos. |
+| RNF-05 | Seguridad: Solo lectura sobre bases de datos analizadas | El sistema únicamente procesa archivos de esquema sin que ningún endpoint ejecute operaciones de modificación sobre bases externas. |
+| RNF-06 | Seguridad: Archivos temporales eliminados tras el procesamiento | Uso de os.tmpdir para el almacenamiento temporal, con eliminación del archivo inmediatamente después de invocar el motor Python. |
+| RNF-07 | Privacidad: Políticas de seguridad en todas las tablas | Definición de políticas Row Level Security para cada tabla de la base de datos. |
+| RNF-08 | Compatibilidad con Chrome, Firefox, Edge y Safari | Desarrollo del frontend con HTML5, CSS3 y JavaScript estándar, sin dependencias de tecnologías propietarias del navegador. |
+| RNF-09 | Portabilidad en Windows y Linux | Uso de Node.js y Python como plataformas multiplataforma, con os.tmpdir y path.join para independencia del sistema operativo. |
+| RNF-10 | Escalabilidad para múltiples usuarios simultáneos | Diseño de un servidor stateless sin estado de sesión local, con sesiones gestionadas por el servicio de autenticación en la nube. |
 
-Clases principales:
+<div style="page-break-after: always; visibility: hidden">\pagebreak</div>
 
-- BaseDeDatos: contiene la información general del esquema
-- Tabla: representa cada entidad de la base de datos  
-- Columna: define los atributos de cada tabla  
-- Relacion: representa las conexiones entre tablas  
-- Analizador: encargado de procesar la estructura  
-- GeneradorDocumentacion: produce la documentación  
-- MotorIA: realiza el análisis inteligente  
+# **3.** REPRESENTACIÓN DE LA ARQUITECTURA DEL SISTEMA
 
-## 3.2.6 Diagrama de Base de Datos (relacional o no relacional)
+## **3.1.** Vista de Caso de uso
 
-El sistema trabaja con bases de datos relacionales, analizando elementos como:
-- Tablas  
-- Campos  
-- Claves primarias  
-- Claves foráneas  
-- Relaciones  
+La vista de casos de uso identifica los escenarios de mayor impacto arquitectónico que guían las decisiones de diseño del sistema.
 
-Además, puede detectar problemas como redundancia de datos o relaciones mal definidas.
+### **3.1.1.** Diagramas de Casos de uso
 
----
+## **3.2.** Vista Lógica
 
-## 3.3 Vista de Implementación (vista de desarrollo)
+La vista lógica describe la descomposición del sistema en subsistemas, paquetes y clases, mostrando las responsabilidades y relaciones entre los principales elementos de diseño.
 
-El sistema está construido siguiendo una arquitectura por capas, lo que permite organizar mejor el desarrollo.
+### **3.2.1.** Diagrama de Subsistemas (paquetes)
 
-### Capas
+### **3.2.2.** Diagrama de Secuencia (vista de diseño)
 
-- Capa de presentación  
-- Capa lógica  
-- Capa de datos  
-- Capa de inteligencia artificial  
+### **3.2.3.** Diagrama de Colaboración (vista de diseño)
 
-## 3.3.1 Diagrama de arquitectura software (paquetes)
+### **3.2.4.** Diagrama de Objetos
 
-El sistema está organizado en diferentes módulos o paquetes que cumplen funciones específicas dentro de la aplicación. Esta división permite que cada parte del sistema trabaje de forma independiente, lo cual facilita tanto el desarrollo como el mantenimiento.
+### **3.2.5.** Diagrama de Clases
 
-Cada paquete se encarga de una responsabilidad concreta, por ejemplo: la entrada de datos, el análisis, la generación de documentación y la gestión de reportes. Esta separación ayuda a evitar dependencias innecesarias entre componentes, lo que significa que si se necesita modificar una parte del sistema (por ejemplo, mejorar el módulo de inteligencia artificial), no será necesario afectar el resto de la aplicación.
+### **3.2.6.** Diagrama de Base de datos (relacional o no relacional)
 
+## **3.3.** Vista de Implementación (vista de desarrollo)
 
-## 3.3.2 Diagrama de arquitectura del sistema (Diagrama de componentes)
+### **3.3.1.** Diagrama de arquitectura software (paquetes)
 
-El diagrama de componentes muestra cómo está construido el sistema a nivel más técnico, es decir, cómo se conectan sus partes principales y cómo interactúan entre sí.
+### **3.3.2.** Diagrama de arquitectura del sistema (Diagrama de componentes)
 
-El sistema se encuentra dividido en varias capas:
+## **3.4.** Vista de procesos
 
-- Interfaz de usuario (Frontend): donde el usuario interactúa con el sistema 
-- API Backend: donde se gestionan las solicitudes y la lógica del sistema
-- Motor de análisis: encargado de procesar la estructura de la base de datos 
-- Servicio de inteligencia artificial: responsable de generar la documentación y el análisis
-- Base de datos: donde se almacenan configuraciones o resultado
+### **3.4.1.** Diagrama de Procesos del sistema (diagrama de actividad)
 
-Cada componente cumple una función específica, pero todos trabajan de manera conjunta para lograr el objetivo del sistema. Este tipo de arquitectura permite tener un sistema más ordenado, fácil de entender y más sencillo de mantener.
+## **3.5.** Vista de Despliegue (vista física)
 
----
+### **3.5.1.** Diagrama de despliegue
 
-## 3.4 Vista de Procesos
+<div style="page-break-after: always; visibility: hidden">\pagebreak</div>
 
-La vista de procesos describe cómo funciona el sistema internamente en términos de ejecución. Aquí se analiza cómo se llevan a cabo las tareas principales y cómo se comunican los distintos procesos entre sí.
+# **4.** ATRIBUTOS DE CALIDAD DEL SOFTWARE
 
-El sistema sigue una secuencia lógica de procesamiento donde cada módulo cumple un rol dentro del flujo general. Por ejemplo, primero se recibe la base de datos, luego se procesa, después se analiza y finalmente se generan los resultados.
+## **4.1. Escenario de Funcionalidad**
 
-También se pueden identificar procesos que pueden ejecutarse de manera independiente o paralela, como la generación de documentación y el análisis de auditoría, lo que ayuda a mejorar el rendimiento del sistema.
+- Fuente del estímulo: Usuario desarrollador.
 
+- Estímulo: Carga un archivo .sql con 20 tablas, incluyendo claves foráneas explícitas e implícitas detectables por similitud de nombres de columna como user_id.
 
-## 3.4.1 Diagrama de Procesos del sistema (diagrama de actividad)
+- Entorno: Sistema en operación normal con usuario autenticado en rol estándar.
 
-El diagrama de actividad permite representar gráficamente el flujo de trabajo del sistema, mostrando las diferentes etapas por las que pasa la información.
+- Artefacto: Motor Python en sql_analyzer.py.
 
-El proceso general incluye:
+- Respuesta: El sistema extrae correctamente las 20 tablas, detecta las claves foráneas explícitas mediante sentencias FOREIGN KEY con REFERENCES y las implícitas mediante coincidencia difusa de nombres de columnas, genera el código Mermaid del diagrama Entidad–Relación y retorna el JSON completo al frontend.
 
-- Recepción de la base de datos  
-- Validación de la estructura  
-- Análisis  
-- Procesamiento IA  
-- Generación de documentación  
-- Generación de auditoría  
-- Presentación de resultados  
+- Medida de respuesta: Igual o superior al 95% de precisión en la identificación de tablas, campos, claves primarias y foráneas explícitas; e igual o superior al 80% de precisión en claves foráneas implícitas mediante coincidencia difusa.
 
----
+- Decisión arquitectónica: El motor Python utiliza múltiples estrategias combinadas, como expresiones regulares sobre CREATE TABLE y ALTER TABLE con FOREIGN KEY, claves foráneas en línea con REFERENCES y coincidencia difusa de nombres de columna.
 
-## 3.5 Vista de Despliegue (vista física)
+## **4.2. Escenario de Usabilidad**
 
-La vista de despliegue describe cómo el sistema se implementa en el entorno real, es decir, en qué dispositivos o servidores se ejecuta cada componente.
+- Fuente del estímulo: Usuario analista de sistemas sin experiencia previa con la herramienta.
 
-El sistema utiliza una arquitectura cliente-servidor, donde el usuario accede a través de un navegador web, mientras que el procesamiento se realiza en un servidor.
+- Estímulo: Primer uso del sistema, iniciando sesión, cargando un archivo de esquema .json y solicitando la generación de documentación.
 
-También se puede considerar el uso de servicios en la nube para el procesamiento de inteligencia artificial, lo que permite mejorar el rendimiento y la escalabilidad del sistema.
+- Entorno: Sistema en producción accedido desde Google Chrome en Windows 10.
 
-## 3.5.1 Diagrama de despliegue
+- Respuesta: El sistema guía al usuario visualmente mediante una interfaz de arrastrar y soltar, indicadores de progreso y mensajes de estado claros en español. El resultado se muestra de forma organizada en pestañas diferenciadas para el análisis técnico, el diagrama Entidad–Relación, el convertidor de esquemas y las opciones de exportación.
 
-El diagrama de despliegue muestra los elementos físicos que componen el sistema y cómo se conectan entre sí.
+- Medida de respuesta: El usuario completa el flujo completo desde el inicio de sesión hasta la exportación del PDF en un tiempo igual o menor a 5 minutos sin asistencia externa.
 
-Incluye:
+- Decisión arquitectónica: Interfaz de página única con retroalimentación en tiempo real mediante WebSockets, completamente en español y con mensajes de error descriptivos en lenguaje natural.
 
-- Cliente (navegador web): donde el usuario interactúa  
-- Servidor de aplicaciones: donde se ejecuta el backend  
-- Servicio de IA: encargado del análisis inteligente  
-- Base de datos: almacenamiento de información  
+## **4.3. Escenario de confiabilidad**
 
----
+- Fuente del estímulo: Servicio externo de análisis descriptivo.
 
-# 4 Atributos de Calidad del Software
+- Estímulo: El servicio externo no está disponible temporalmente por timeout, error 503 o créditos agotados durante una solicitud de documentación.
 
-Los atributos de calidad permiten evaluar qué tan bien el sistema cumple con ciertos criterios importantes, más allá de solo funcionar correctamente. Estos atributos ayudan a medir aspectos como rendimiento, seguridad, facilidad de uso, entre otros.
+- Entorno: Sistema en operación normal.
 
-## Escenario de Funcionalidad
+- Respuesta: El sistema captura el error mediante bloques de control, retorna un mensaje descriptivo al frontend y permite al usuario continuar con el análisis del motor local como alternativa, el cual opera de forma independiente sin requerir servicios externos.
 
-El sistema cumple con su objetivo principal, que es analizar bases de datos y generar documentación de forma automática. Además, ofrece funcionalidades adicionales como la detección de errores y la generación de recomendaciones, lo que aporta un valor extra al usuario. 
+- Medida de respuesta: El fallo del servicio externo no provoca la caída del servidor; el sistema retorna un código HTTP 500 con un mensaje JSON descriptivo en un tiempo igual o menor a 3 segundos; el motor local sigue operando con normalidad.
 
-## Escenario de Usabilidad
+- Decisión arquitectónica: Arquitectura de dos motores independientes, uno local y otro externo; si uno falla, el otro continúa disponible, con manejo explícito de errores en todas las funciones asíncronas del servidor.
 
-El sistema está diseñado para ser fácil de usar, permitiendo que el usuario pueda interactuar sin necesidad de conocimientos avanzados. La interfaz es clara y los resultados se presentan de manera comprensible, lo que facilita su interpretación. 
+## **4.4. Escenario de rendimiento**
 
-## Escenario de Confiabilidad
+- Fuente del estímulo: Usuario desarrollador.
 
-El sistema garantiza que la información analizada se mantenga íntegra y que los resultados generados sean consistentes. Además, se busca minimizar errores durante el procesamiento de datos. 
+- Estímulo: Carga un archivo .sql de 16 kilobytes con 20 tablas y 15 relaciones de clave foránea.
 
-## Escenario de Rendimiento
+- Entorno: Sistema en producción con carga normal de 1 a 5 usuarios simultáneos.
 
-El sistema está optimizado para procesar información en tiempos razonables, incluso cuando se trabaja con bases de datos de tamaño considerable. Se busca un equilibrio entre velocidad y uso eficiente de recursos. 
+- Respuesta: El servidor recibe el archivo, invoca el proceso Python, el analizador procesa el SQL, extrae los metadatos, genera el diagrama Mermaid y las conversiones correspondientes, y retorna el JSON completo al cliente.
 
-## Escenario de Mantenibilidad
+- Medida de respuesta: Tiempo total de procesamiento igual o menor a 10 segundos para archivos de hasta 50 tablas; e igual o menor a 5 segundos para esquemas de hasta 20 tablas como el archivo de prueba real del proyecto.
 
-Gracias a su diseño modular, el sistema puede ser modificado o ampliado sin afectar su funcionamiento general. Esto permite realizar mejoras de forma progresiva. 
+- Decisión arquitectónica: Motor Python como proceso local sin latencia de red, comunicación directa por salida estándar y uso de os.tmpdir en disco rápido para archivos temporales.
 
-## Otros Escenarios
+## **4.5. Escenario de mantenibilidad**
 
-El sistema puede manejar múltiples solicitudes al mismo tiempo, manteniendo estabilidad en su funcionamiento. Esto es importante especialmente si se piensa en un uso a mayor escala o en entornos reales. 
+- Fuente del estímulo: Desarrollador del equipo DB Smart Solutions S.A.C.
 
+- Estímulo: Se requiere agregar soporte para un nuevo formato de archivo de esquema, como .prisma del ORM Prisma.
 
----
+- Entorno: Entorno de desarrollo local.
+
+- Respuesta: El desarrollador crea un nuevo método, registra la extensión (.prisma) en el bloque condicional de analyze_file, agrega .prisma a la lista de extensiones permitidas en Multer dentro de server.js y actualiza validateDatabaseContent. El cambio queda localizado y no afecta a los demás módulos.
+
+- Medida de respuesta: El cambio requiere modificaciones en tres archivos como máximo, sin necesidad de refactorizar la arquitectura existente; tiempo estimado de implementación igual o menor a 4 horas.
+
+- Decisión arquitectónica: Patrón de diseño Strategy, donde cada formato de archivo tiene su propio método analizador aislado en DatabaseAnalyzer, respetando el principio abierto/cerrado.
+
+## **4.6. Otros Escenarios**
+
+**Escenario de Escalabilidad**
+
+- Atributo: Escalabilidad.
+
+- Fuente del estímulo: Crecimiento del uso del sistema.
+
+- Estímulo: El número de usuarios simultáneos crece de 5 a 50 usuarios activos.
+
+- Entorno: Sistema desplegado en una plataforma de distribución global.
+
+- Respuesta: La plataforma escala automáticamente las instancias del servidor Node.js mediante funciones serverless. El servicio de base de datos en la nube gestiona el pool de conexiones a PostgreSQL. El servidor es completamente stateless, permitiendo múltiples instancias paralelas sin conflictos ni inconsistencias.
+
+- Medida de respuesta: El tiempo de respuesta se mantiene dentro de los límites definidos de 10 segundos para el análisis local y 30 segundos para el análisis externo, incluso con hasta 50 usuarios simultáneos bajo el plan gratuito de la plataforma.
+
+- Decisión arquitectónica: Servidor stateless en el que las sesiones se validan contra la base de datos en cada solicitud sin almacenamiento local, con despliegue en plataforma serverless que escala horizontalmente de forma automática según la demanda.
